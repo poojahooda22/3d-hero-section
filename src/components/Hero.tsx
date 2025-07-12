@@ -20,10 +20,10 @@ const Hero: React.FC = () => {
         gsap.set([lines, sub, btn], { y: 100, opacity: 0 }); 
 
         gsap
-          .timeline({ defaults: { ease: 'power3.out', duration: 0.8, delay: 0.5 } })
-          .to(lines, { y: 0, opacity: 1, stagger: 0.15 })
+          .timeline({ defaults: { ease: 'power3.out', duration: 0.8 } })
+          .to(lines, { y: 0, opacity: 1, stagger: 0.4 })
             .to(sub, { y: 0, opacity: 1 })
-          .to(btn,   { y: 0, opacity: 1 }, '-=0.1');     
+          .to(btn,   { y: 0, opacity: 1 });     
         }, container);
 
       return () => ctx.revert();
