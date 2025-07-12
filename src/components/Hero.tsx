@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
        </div>
 
          {/* right side */}
-        <div className='w-full h-full z-0 -mr-[10vw]'>
+        <div className='w-full h-full z-0 -mr-[8vw]'>
             <Spline
                 scene="https://prod.spline.design/iaU3GDpGxdZpXTtj/scene.splinecode" 
             />
