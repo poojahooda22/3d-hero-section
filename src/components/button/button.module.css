@@ -1,0 +1,123 @@
+/* ---------- core ---------- */
+.button {
+  all: unset;
+  position: relative;
+  display: inline-flex;
+  height: 3.5rem;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 640;
+  color: #fafaf6;
+  letter-spacing: -0.06em;
+}
+
+.buttonItem {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.buttonItem .buttonBg {
+  border-color: rgb(86, 48, 210);
+  background-color: rgb(86, 46, 231);
+}
+
+/* ---------- text layers ---------- */
+.buttonInner,
+.buttonInnerHover,
+.buttonInnerStatic {
+  pointer-events: none;
+  display: block;
+}
+
+.buttonInner {
+  position: relative;
+}
+
+.buttonInnerHover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(70%);
+}
+
+/* ---------- background blob ---------- */
+.buttonBg {
+  overflow: hidden;
+  border-radius: 2rem;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.buttonBg,
+.buttonBgLayer,
+.buttonBgLayers {
+  display: block;
+}
+
+.buttonBgLayers {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -60%;
+  aspect-ratio: 1 / 1;
+  width: max(200%, 10rem);
+}
+
+.buttonBgLayer {
+  border-radius: 9999px;
+  position: absolute;
+  inset: 0;
+  transform: scale(0);
+}
+
+/* numbered layers (no extra rules—used for the hover animation) */
+.buttonBgLayer1 {}
+.buttonBgLayer2 {}
+.buttonBgLayer3 {}
+
+/* colour variants */
+.buttonBgLayerPurple    { background-color: #66ed5f; }
+.buttonBgLayerTurquoise { background-color:  #F97316;   }
+.buttonBgLayerYellow    { background-color: #22D3EE;  }
+
+/* ---------- interactive states ---------- */
+.button:hover .buttonInnerStatic {
+  opacity: 0;
+  transform: translateY(-70%);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity   0.3s linear;
+}
+
+.button:hover .buttonInnerHover {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity   1.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button:hover .buttonBgLayer {
+  transition:
+    transform 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity   0.3s linear;
+}
+
+.button:hover .buttonBgLayer1 { transform: scale(1); }
+
+.button:hover .buttonBgLayer2 {
+  transition-delay: 0.1s;
+  transform: scale(1);
+}
+
+.button:hover .buttonBgLayer3 {
+  transition-delay: 0.2s;
+  transform: scale(1);
+}
