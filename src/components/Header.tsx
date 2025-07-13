@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { navData } from './data'
 import { motion } from 'framer-motion'
-import Button from './button/Button'
+import { TfiAlignLeft } from "react-icons/tfi";
 
 const Header = () => {
   return (
@@ -48,7 +48,9 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 1.6 }}
         >
-            <Button/>
+           <TfiAlignLeft 
+            className='text-3xl' 
+           />
         </motion.div>
       </div>
     </header>

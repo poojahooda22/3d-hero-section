@@ -39,17 +39,17 @@ const Hero: React.FC = () => {
         {/* left side */}
        <div className='w-full  mt-[1vw]' ref={container} >
             <div className="overflow-hidden">
-                <h1 className=' hero-line text-4xl md:text-7xl lg:text-7xl font-bold z-10 mb-2'>
+                <h1 className=' hero-line text-4xl md:text-7xl lg:text-8xl font-bold z-10 mb-2'>
                     Simplifying DeF&apos;s
                 </h1>
             </div>
             <div className="overflow-hidden">
-                <h1 className=' hero-line text-4xl md:text-7xl lg:text-7xl font-bold z-10 mb-2'>
+                <h1 className=' hero-line text-4xl md:text-7xl lg:text-8xl font-bold z-10 mb-2'>
                     Most Complex
                 </h1>
             </div>
             <div className="overflow-hidden">
-                <h1 className=' hero-line text-4xl md:text-7xl lg:text-7xl font-bold z-10 mb-2'>
+                <h1 className=' hero-line text-4xl md:text-7xl lg:text-8xl font-bold z-10 mb-4'>
                     Interactions
                 </h1>
             </div>
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
                     and AI interactions tomake DeFi simpler and 
                 </p>
            </div>
-           <div className='overflow-hidden mb-4'>
+           <div className='overflow-hidden mb-6'>
                 <p className='hero-sub w-[60%] text-xl font-light'>
                     enable builders to ship faster.
                 </p>
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
        </div>
 
          {/* right side */}
-        <div className='w-full h-full z-0 -mr-[8vw]'>
+        <div className='w-full h-full z-0 -mr-[8.2vw]'>
             <Spline
                 scene="https://prod.spline.design/iaU3GDpGxdZpXTtj/scene.splinecode" 
             />
